@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in · NaijaHaul</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b6b3a">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/icon-192.png">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="auth-body">
+    <main class="auth-card">
+        <div class="brand">NaijaHaul</div>
+        <p id="msg" class="alert" role="alert" hidden></p>
+
+        <section data-mode="signin">
+            <h1>Sign in</h1>
+            <form data-form="signin" novalidate>
+                <label class="field"><span class="lbl">Email</span><input name="email" type="email" autocomplete="email" required></label>
+                <label class="field"><span class="lbl">Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+                <button type="submit" class="btn btn-primary block">Sign in</button>
+            </form>
+            <button class="btn block" data-action="auth:google" type="button">Continue with Google</button>
+            <p class="links"><a href="#" data-action="auth:mode" data-to="forgot">Forgot password?</a> · <a href="#" data-action="auth:mode" data-to="signup">Create an account</a></p>
+        </section>
+
+        <section data-mode="signup" hidden>
+            <h1>Start your 7-day free trial</h1>
+            <form data-form="signup" novalidate>
+                <label class="field"><span class="lbl">Full name</span><input name="full_name" autocomplete="name" required></label>
+                <label class="field"><span class="lbl">Email</span><input name="email" type="email" autocomplete="email" required></label>
+                <label class="field"><span class="lbl">Password (min. 8 characters)</span><input name="password" type="password" autocomplete="new-password" required></label>
+                <button type="submit" class="btn btn-primary block">Create account</button>
+            </form>
+            <p class="links">No card required. <a href="#" data-action="auth:mode" data-to="signin">I already have an account</a></p>
+        </section>
+
+        <section data-mode="forgot" hidden>
+            <h1>Reset password</h1>
+            <form data-form="forgot" novalidate>
+                <label class="field"><span class="lbl">Email</span><input name="email" type="email" autocomplete="email" required></label>
+                <button type="submit" class="btn btn-primary block">Send reset link</button>
+            </form>
+            <p class="links"><a href="#" data-action="auth:mode" data-to="signin">Back to sign in</a></p>
+        </section>
+
+        <section data-mode="setpw" hidden>
+            <h1>Set your password</h1>
+            <form data-form="setpw" novalidate>
+                <label class="field"><span class="lbl">New password (min. 8 characters)</span><input name="password" type="password" autocomplete="new-password" required></label>
+                <button type="submit" class="btn btn-primary block">Save and continue</button>
+            </form>
+        </section>
+        <p class="links"><a href="/">← Home</a></p>
+    </main>
+    <script type="module" src="/js/login.js"></script>
+</body>
+</html>

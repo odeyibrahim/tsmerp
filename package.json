@@ -1,0 +1,16 @@
+{
+  "name": "naijahaul-tms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-tenant transport & fleet management for Nigerian haulage and transport companies. Vanilla JS + Supabase + Netlify, built on the V. Gallery stack.",
+  "scripts": {
+    "build": "node scripts/build-config.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "dev": "npx netlify-cli dev"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}
